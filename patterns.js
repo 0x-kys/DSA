@@ -116,3 +116,63 @@ function pattern4(N) {
 }
 
 pattern4(5);
+console.log();
+
+/**
+ *  * * * * *
+ *  * * * *
+ *  * * *
+ *  * *
+ *  *
+ */
+
+/**
+ * Print star pattern from 1 -> N moving to 1.
+ *
+ * @param {number} N - Pattern size
+ * @returns {void}
+ */
+
+function pattern5(N) {
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N - i; j++) {
+      process.stdout.write(`*`);
+      if (j < N - i - 1) {
+        process.stdout.write("-");
+      }
+    }
+    console.log("");
+  }
+}
+
+pattern5(5);
+console.log();
+
+/**
+ * 1 2 3 4 5
+ * 1 2 3 4
+ * 1 2 3
+ * 1 2
+ * 1
+ */
+
+/**
+ * Print lower to highest number pattern from 1 -> N moving to 1.
+ *
+ * @param {number} N - Pattern size
+ * @returns {void}
+ */
+
+function pattern6(N) {
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N - i; j++) {
+      process.stdout.write(`${j + 1}`);
+      if (j < N - i - 1) {
+        process.stdout.write("-");
+      }
+    }
+    console.log("");
+  }
+}
+
+pattern6(5);
