@@ -7,8 +7,6 @@
  */
 
 /**
- * Prints N*N star pattern.
- *
  * @param {number} N - Pattern size.
  * @returns {void}
  */
@@ -37,8 +35,6 @@ console.log("");
  */
 
 /**
- * Print star pattern of N size moving from 1 to N.
- *
  * @param {number} N - Pattern size;
  * @returns {void}
  */
@@ -67,8 +63,6 @@ console.log("");
  */
 
 /**
- * Print number pattern of N size moving from 1 to N.
- *
  * @param {number} N - Pattern size;
  * @returns {void}
  */
@@ -97,8 +91,6 @@ console.log("");
  */
 
 /**
- * Print a number - number of times based on index in loop.
- *
  * @param {number} N - Pattern size;
  * @returns {void}
  */
@@ -127,8 +119,6 @@ console.log();
  */
 
 /**
- * Print star pattern from 1 -> N moving to 1.
- *
  * @param {number} N - Pattern size
  * @returns {void}
  */
@@ -157,12 +147,9 @@ console.log();
  */
 
 /**
- * Print lower to highest number pattern from 1 -> N moving to 1.
- *
  * @param {number} N - Pattern size
  * @returns {void}
  */
-
 function pattern6(N) {
   for (let i = 0; i < N; i++) {
     for (let j = 0; j < N - i; j++) {
@@ -176,3 +163,121 @@ function pattern6(N) {
 }
 
 pattern6(5);
+console.log();
+
+/*
+ *     *
+ *    * *
+ *   * * *
+ *  * * * *
+ * * * * * *
+ */
+
+/**
+ * @param {number} N - Pattern Size.
+ * @returns {void}
+ */
+function pattern7(N) {
+  for (let i = 0; i < N; i++) {
+    let spaces = " ".repeat(N - 1 - i);
+    let stars = "* ".repeat(i + 1);
+
+    console.log(spaces + stars.trim());
+  }
+}
+
+pattern7(5);
+console.log();
+
+/*
+ *  * * * * *
+ *   * * * *
+ *    * * *
+ *     * *
+ *      *
+ */
+
+/**
+ * @param {number} N - Pattern Size.
+ * @returns {void}
+ */
+function pattern8(N) {
+  for (let i = 0; i < N; i++) {
+    let spaces = " ".repeat(i);
+    let stars = "* ".repeat(N - i);
+
+    console.log(spaces + stars.trim());
+  }
+}
+
+pattern8(5);
+console.log();
+
+/*
+ *      *
+ *     * *
+ *    * * *
+ *   * * * *
+ *  * * * * *
+ *  * * * * *
+ *   * * * *
+ *    * * *
+ *     * *
+ *      *
+ */
+
+/**
+ * @param {number} N - Pattern Size.
+ * @returns {void}
+ */
+
+function pattern9(N) {
+  for (let i = 0; i < N; i++) {
+    let spaces = " ".repeat(N - 1 - i);
+    let stars = "* ".repeat(i + 1);
+
+    console.log(spaces + stars.trim());
+  }
+
+  for (let i = 0; i < N; i++) {
+    let spaces = " ".repeat(i);
+    let stars = "* ".repeat(N - i);
+
+    console.log(spaces + stars.trim());
+  }
+}
+
+pattern9(5);
+console.log();
+
+//*
+//* *
+//* * *
+//* * * *
+//* * * * *
+//* * * *
+//* * *
+//* *
+//*
+
+/**
+ * @param {number} N - Pattern Size.
+ * @returns {void}
+ */
+
+function pattern10(N) {
+  for (let i = 1; i <= 2 * N - 1; i++) {
+    let stars = i;
+
+    if (i > N) {
+      stars = 2 * N - i;
+    }
+
+    for (let j = 1; j <= stars; j++) {
+      process.stdout.write("* ");
+    }
+    console.log();
+  }
+}
+
+pattern10(5);
