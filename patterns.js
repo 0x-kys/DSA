@@ -250,15 +250,15 @@ function pattern9(N) {
 pattern9(5);
 console.log();
 
-//*
-//* *
-//* * *
-//* * * *
-//* * * * *
-//* * * *
-//* * *
-//* *
-//*
+// *
+// * *
+// * * *
+// * * * *
+// * * * * *
+// * * * *
+// * * *
+// * *
+// *
 
 /**
  * @param {number} N - Pattern Size.
@@ -281,3 +281,41 @@ function pattern10(N) {
 }
 
 pattern10(5);
+console.log();
+
+// 1
+// 0 1
+// 1 0 1
+// 0 1 0 1
+// 1 0 1 0 1
+
+/**
+ * Binary number triangle pattern
+ *
+ * @param {number} N - Pattern Size.
+ * @returns {void}
+ */
+
+function pattern11(N) {
+  let start = 1;
+  let current = 0;
+  for (let i = 0; i < N; i++) {
+    if (i % 2 === 0) {
+      start = 0;
+    } else {
+      start = 1;
+    }
+    for (let j = 0; j < i + 1; j++) {
+      process.stdout.write(`${start}`);
+      start = 1 - start;
+
+      if (j < i) {
+        process.stdout.write(" ");
+      }
+    }
+    console.log();
+  }
+}
+
+pattern11(5);
+console.log();
