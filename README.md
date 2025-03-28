@@ -4,11 +4,8 @@
 
 ### Langs
 
-- Primary: JavaScript/TypeScript
-- Secondary: Python
-- Rarely: C++
+- CPP
 
 ### Map
 
-- Basics
-- Patterns (current)
+- TODO. get real.
